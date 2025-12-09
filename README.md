@@ -6,13 +6,9 @@
 
 > A full-stack AI-powered application that allows users to upload images and ask questions about them using computer vision and natural language processing.
 
-[English](#english) | [Español](#español)
-
 ---
 
-## English
-
-### 📋 Table of Contents
+## 📋 Table of Contents
 
 - [Features](#features)
 - [Demo](#demo)
@@ -25,7 +21,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-### ✨ Features
+## ✨ Features
 
 - 🎨 **Image Upload**: Support for JPEG, PNG, GIF, and WEBP formats (max 10MB)
 - 🔍 **Advanced Vision AI**: Detailed image analysis including:
@@ -39,7 +35,7 @@
 - 📱 **Responsive Design**: Works on desktop and mobile devices
 - ⚡ **Real-time Feedback**: Loading states and error handling
 
-### 🎬 Demo
+## 🎬 Demo
 
 1. Upload an image (event poster, product photo, chart, etc.)
 2. AI analyzes and generates a detailed description
@@ -47,7 +43,7 @@
 4. Get AI-powered answers based on the image content
 5. Upload a new image to continue
 
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 **Frontend:**
 - React 18 with Hooks
@@ -61,7 +57,7 @@
 - Multer (file uploads)
 - In-memory session storage (Map)
 
-### 🏗️ Architecture
+## 🏗️ Architecture
 
 ```
 ┌─────────────┐
@@ -96,14 +92,14 @@
 3. User asks questions → NLP API answers based on description
 4. After 5 questions → session expires, new image required
 
-### 🚀 Getting Started
+## 🚀 Getting Started
 
-#### Prerequisites
+### Prerequisites
 
 - Node.js 18+ and npm/pnpm/yarn
 - OpenAI API key ([get one here](https://platform.openai.com/api-keys))
 
-#### Installation
+### Installation
 
 1. **Clone the repository**
 
@@ -139,7 +135,7 @@ PORT=3000
 
 See [Configuration](#configuration) for all available options.
 
-#### Running the Application
+### Running the Application
 
 **Development Mode:**
 
@@ -174,9 +170,9 @@ npm run build
 npm run preview
 ```
 
-### ⚙️ Configuration
+## ⚙️ Configuration
 
-#### Environment Variables
+### Environment Variables
 
 Create a `.env` file in `backend/` directory with the following variables:
 
@@ -187,7 +183,7 @@ Create a `.env` file in `backend/` directory with the following variables:
 | `NLP_MODEL` | Model for chat responses | `gpt-4o-mini` | No |
 | `PORT` | Backend server port | `3000` | No |
 
-#### Model Selection
+### Model Selection
 
 **Vision Models** (for image analysis):
 - `gpt-4o` - Best quality, higher cost
@@ -198,9 +194,9 @@ Create a `.env` file in `backend/` directory with the following variables:
 - `gpt-4o` - Higher quality, higher cost
 - `gpt-3.5-turbo` - Faster, lower cost
 
-### 📚 API Documentation
+## 📚 API Documentation
 
-#### `POST /api/upload-image`
+### `POST /api/upload-image`
 
 Upload an image and create a new session.
 
@@ -218,7 +214,7 @@ Upload an image and create a new session.
 }
 ```
 
-#### `POST /api/chat`
+### `POST /api/chat`
 
 Ask a question about the uploaded image.
 
@@ -249,7 +245,7 @@ Ask a question about the uploaded image.
 }
 ```
 
-#### `GET /api/health`
+### `GET /api/health`
 
 Health check endpoint.
 
@@ -261,9 +257,9 @@ Health check endpoint.
 }
 ```
 
-### 🚢 Deployment
+## 🚢 Deployment
 
-#### Deploying to Production
+### Deploying to Production
 
 **Backend (Node.js):**
 - Deploy to: Heroku, Railway, Render, AWS, DigitalOcean
@@ -283,7 +279,7 @@ Health check endpoint.
 - Add monitoring (Sentry, Datadog)
 - Use HTTPS
 
-### 🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
@@ -293,11 +289,11 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for det
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### 📄 License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 - OpenAI for GPT-4o and GPT-4o-mini APIs
 - React and Vite communities
@@ -305,181 +301,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Español
-
-### 📋 Tabla de Contenidos
-
-- [Características](#características)
-- [Demostración](#demostración)
-- [Stack Tecnológico](#stack-tecnológico)
-- [Arquitectura](#arquitectura-1)
-- [Comenzando](#comenzando)
-- [Configuración](#configuración-1)
-- [Documentación de API](#documentación-de-api)
-- [Despliegue](#despliegue)
-- [Contribuir](#contribuir)
-- [Licencia](#licencia-1)
-
-### ✨ Características
-
-- 🎨 **Carga de Imágenes**: Soporte para formatos JPEG, PNG, GIF y WEBP (máx 10MB)
-- 🔍 **IA de Visión Avanzada**: Análisis detallado de imágenes incluyendo:
-  - Descripción visual (objetos, colores, composición)
-  - OCR (extracción de texto)
-  - Extracción de información de eventos (para posters/flyers)
-  - Reconocimiento de personajes y marcas
-- 💬 **Chat Interactivo**: Preguntas y respuestas en lenguaje natural sobre imágenes
-- 🔒 **Gestión de Sesiones**: Límite de 5 preguntas por imagen con limpieza automática
-- 🎯 **Contexto Inteligente**: IA responde basándose únicamente en la descripción de la imagen
-- 📱 **Diseño Responsivo**: Funciona en dispositivos de escritorio y móviles
-- ⚡ **Retroalimentación en Tiempo Real**: Estados de carga y manejo de errores
-
-### 🎬 Demostración
-
-1. Sube una imagen (poster de evento, foto de producto, gráfico, etc.)
-2. La IA analiza y genera una descripción detallada
-3. Haz hasta 5 preguntas sobre la imagen
-4. Obtén respuestas generadas por IA basadas en el contenido de la imagen
-5. Sube una nueva imagen para continuar
-
-### 🛠️ Stack Tecnológico
-
-**Frontend:**
-- React 18 con Hooks
-- Vite (herramienta de build)
-- CSS Modules
-- Fetch API
-
-**Backend:**
-- Node.js + Express
-- API de OpenAI (GPT-4o para visión, GPT-4o-mini para chat)
-- Multer (carga de archivos)
-- Almacenamiento de sesiones en memoria (Map)
-
-### 🏗️ Arquitectura
-
-El sistema sigue una arquitectura cliente-servidor con integración de APIs de IA:
-
-**Flujo:**
-1. Usuario sube imagen → API de Visión genera descripción detallada
-2. Descripción almacenada en sesión (con ID de sesión único)
-3. Usuario hace preguntas → API de NLP responde basándose en descripción
-4. Después de 5 preguntas → sesión expira, se requiere nueva imagen
-
-### 🚀 Comenzando
-
-#### Prerrequisitos
-
-- Node.js 18+ y npm/pnpm/yarn
-- Clave API de OpenAI ([obténla aquí](https://platform.openai.com/api-keys))
-
-#### Instalación
-
-1. **Clonar el repositorio**
-
-```bash
-git clone https://github.com/tuusuario/visual-qa-chatbot.git
-cd visual-qa-chatbot
-```
-
-2. **Instalar dependencias del backend**
-
-```bash
-cd backend
-npm install
-```
-
-3. **Instalar dependencias del frontend**
-
-```bash
-cd ../frontend
-npm install
-```
-
-4. **Configurar variables de entorno**
-
-Crea un archivo `.env` en el directorio `backend/`:
-
-```env
-OPENAI_API_KEY=sk-tu-clave-api-real-aqui
-VISION_MODEL=gpt-4o
-NLP_MODEL=gpt-4o-mini
-PORT=3000
-```
-
-Ver [Configuración](#configuración-1) para todas las opciones disponibles.
-
-#### Ejecutar la Aplicación
-
-**Modo Desarrollo:**
-
-1. **Iniciar el backend** (desde directorio `backend/`):
-
-```bash
-npm run dev
-```
-
-El backend correrá en `http://localhost:3000`
-
-2. **Iniciar el frontend** (desde directorio `frontend/`, nueva terminal):
-
-```bash
-npm run dev
-```
-
-El frontend correrá en `http://localhost:5173`
-
-3. **Abrir tu navegador** y navegar a `http://localhost:5173`
-
-### ⚙️ Configuración
-
-#### Variables de Entorno
-
-Crea un archivo `.env` en el directorio `backend/` con las siguientes variables:
-
-| Variable | Descripción | Por Defecto | Requerida |
-|----------|-------------|-------------|-----------|
-| `OPENAI_API_KEY` | Tu clave API de OpenAI | - | ✅ Sí |
-| `VISION_MODEL` | Modelo para análisis de imágenes | `gpt-4o` | No |
-| `NLP_MODEL` | Modelo para respuestas de chat | `gpt-4o-mini` | No |
-| `PORT` | Puerto del servidor backend | `3000` | No |
-
-#### Selección de Modelos
-
-**Modelos de Visión** (para análisis de imágenes):
-- `gpt-4o` - Mejor calidad, mayor costo
-- `gpt-4o-mini` - Visión básica, menor costo
-
-**Modelos NLP** (para Q&A):
-- `gpt-4o-mini` - Recomendado, buen balance
-- `gpt-4o` - Mayor calidad, mayor costo
-- `gpt-3.5-turbo` - Más rápido, menor costo
-
-### 🚢 Despliegue
-
-**Backend (Node.js):**
-- Desplegar en: Heroku, Railway, Render, AWS, DigitalOcean
-- Configurar variables de entorno en el dashboard de la plataforma
-
-**Frontend (React):**
-- Build: `npm run build`
-- Desplegar en: Vercel, Netlify, AWS S3 + CloudFront
-
-**Mejoras recomendadas para producción:**
-- Usar Redis para almacenamiento de sesiones
-- Almacenar imágenes en S3/Cloudinary
-- Agregar autenticación
-- Implementar rate limiting
-- Agregar monitoreo
-
-### 🤝 Contribuir
-
-¡Las contribuciones son bienvenidas! Por favor consulta [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles.
-
-### 📄 Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-**Hecho con ❤️ por la comunidad Open Source**
+**Made with ❤️ for the Open Source community**
